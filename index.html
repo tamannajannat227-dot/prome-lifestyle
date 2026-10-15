@@ -3,291 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROMI - Subarna Mostafa Promi</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<title>Subarna Mostafa Promi - Official Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: #fdfbf8;
-    color: #1a1a1a;
-    font-family: 'Hind Siliguri', sans-serif;
-    line-height: 1.7;
-  }
-
-  /* ===== BANNER / HERO ===== */
-  .banner {
-    max-width: 1240px;
-    margin: 40px auto 30px;
-    padding: 80px 40px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    border-radius: 32px;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-  }
-
-  .banner::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .banner h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 9vw, 82px);
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 18px;
-    position: relative;
-  }
-
-  .banner .subtitle {
-    font-size: 20px;
-    opacity: 0.85;
-    margin-bottom: 30px;
-    font-weight: 400;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #fff;
-    color: #111;
-    padding: 14px 32px;
-    border-radius: 100px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-
-  @media (max-width: 600px) {
-    .banner {
-      padding: 60px 24px;
-      margin: 20px 16px 20px;
-    }
-  }
-
-  /* ===== WRAP ===== */
-  .wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 10px 20px 60px;
-  }
-
-  /* ===== ABOUT SECTION ===== */
-  .about-section {
-    background: #fff;
-    border: 1px solid #f0e9e2;
-    border-radius: 28px;
-    padding: 40px 32px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  }
-
-  .about-section h2 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    color: #222;
-  }
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  @media (max-width: 700px) {
-    .info-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .info-card {
-    background: #faf8f5;
-    border-radius: 18px;
-    padding: 22px 20px;
-    border: 1px solid #f0e9e2;
-  }
-
-  .info-card h3 {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #111;
-  }
-
-  .info-card p {
-    font-size: 15.5px;
-    color: #444;
-  }
-
-  .full-width {
-    grid-column: 1 / -1;
-  }
-
-  /* ===== GALLERY ===== */
-  .gallery-section {
-    background: #fff;
-    border: 1px solid #f0e9e2;
-    border-radius: 28px;
-    padding: 36px 28px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  }
-
-  .gallery-section h3 {
-    text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 28px;
-    color: #222;
-  }
-
-  .masonry {
-    columns: 2;
-    column-gap: 18px;
-  }
-
-  @media (max-width: 700px) {
-    .masonry {
-      columns: 1;
-    }
-  }
-
-  .masonry img {
-    width: 100%;
-    border-radius: 22px;
-    margin-bottom: 18px;
-    object-fit: cover;
-    display: block;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s ease;
-  }
-
-  .masonry img:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
-  }
-
-  /* ===== FOOTER ===== */
-  .footer {
-    text-align: center;
-    padding: 50px 20px;
-    background: #111;
-    color: #999;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-  }
-
-  .footer span {
-    color: #fff;
-    font-weight: 500;
-  }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Hind Siliguri',sans-serif;scroll-behavior:smooth}
+body{background:#050505;color:#e0e0e0;overflow-x:hidden}
+nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(20,20,20,0.8);backdrop-filter:blur(10px);border:1px solid #222;padding:8px 15px;border-radius:50px;display:flex;gap:5px}
+nav a{color:#888;text-decoration:none;padding:8px 16px;border-radius:20px;transition:0.3s;font-size:14px;font-weight:600}
+nav a:hover,nav a.active{background:#fff;color:#000;box-shadow:0 0 15px rgba(255,255,255,0.3)}
+.hero{height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 0%, #1a1a1a, #000);padding:20px}
+.hero h1{font-size:42px;font-weight:700;background:linear-gradient(to bottom, #fff, #888);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;animation:fadeUp 1s ease}
+.hero p{color:#888;animation:fadeUp 1.2s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.container{max-width:700px;margin:0 auto;padding:20px}
+.card{background:linear-gradient(145deg, #111, #0a0a0a);border:1px solid #1e1e1e;border-radius:24px;padding:30px;margin-bottom:30px;box-shadow:0 10px 30px rgba(0,0,0,0.5);transition:0.4s;position:relative;overflow:hidden}
+.card:hover{border-color:#333;transform:translateY(-5px)}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg, transparent, #333, transparent)}
+.card h2{font-size:24px;margin-bottom:20px;display:flex;align-items:center;gap:10px;color:#fff}
+.card h2 i{width:40px;height:40px;background:#1a1a1a;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}
+.info-item{background:#0f0f0f;padding:15px;border-radius:12px;border:1px solid #1a1a1a}
+.info-item b{display:block;color:#666;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.gallery-box{background:#0f0f0f;height:150px;border-radius:15px;border:1px dashed #333;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#555}
+.social-btn{display:flex;align-items:center;gap:15px;padding:16px 20px;background:#111;border:1px solid #222;border-radius:14px;text-decoration:none;color:#fff;margin-bottom:12px;transition:0.3s}
+.social-btn:hover{transform:translateX(5px);border-color:#444}
+.social-btn.youtube:hover{background:#1a0a0a;border-color:#ff0000}
+.social-btn.instagram:hover{background:#1a0a14;border-color:#C13584}
+.social-btn.tiktok:hover{background:#0a0a0a;border-color:#fff}
+.social-icon{width:45px;height:45px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.youtube .social-icon{background:#ff0000}.instagram .social-icon{background:linear-gradient(45deg,#f09433,#dc2743)}.tiktok .social-icon{background:#fff;color:#000}
+.footer{background:#080808;border-top:1px solid #111;padding:40px 20px;text-align:center;margin-top:50px}
+.footer h3{font-size:20px;letter-spacing:2px}
+.footer p{color:#555;margin-top:10px}
+.dev-badge{display:inline-block;margin-top:15px;padding:8px 20px;background:#fff;color:#000;border-radius:30px;font-weight:700;font-size:13px;letter-spacing:1px}
 </style>
 </head>
 <body>
 
-  <!-- BANNER -->
-  <div class="banner">
-    <h1>SUBARNA<br>MOSTAFA<br>PROMI</h1>
-    <div class="subtitle">ডাক নাম • প্রমি</div>
-    <div class="badge">🎂 ২১ অক্টোবর &nbsp;|&nbsp; 21 October</div>
-  </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#friends">Friends</a>
+<a href="#social">Social</a>
+</nav>
 
-  <div class="wrap">
+<div class="hero" id="home">
+<div>
+<h1>সুবর্ণা মোস্তফা প্রমি</h1>
+<p>ডাক নাম: প্রমি | জন্মদিন: ২১ অক্টোবর 🎂</p>
+</div>
+</div>
 
-    <!-- ABOUT SECTION -->
-    <div class="about-section">
-      <h2>👩‍🎓 আমার সম্পর্কে</h2>
+<div class="container">
 
-      <div class="info-grid">
+<div class="card">
+<h2><i class="fa-solid fa-user"></i> আমার সম্পর্কে</h2>
+<p>আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
+<div class="info-grid">
+<div class="info-item"><b>পছন্দ</b> ছবি আঁকা - রং-তুলি হাতে নিলেই অন্য জগতে হারিয়ে যাই, এটা আমার ভালোবাসা।</div>
+<div class="info-item"><b>প্রিয় বিষয়</b> গণিত - অংকের সমাধান করতে দারুণ লাগে।</div>
+<div class="info-item"><b>স্বপ্ন</b> শিক্ষক হওয়া - আদর্শ শিক্ষক হতে চাই।</div>
+<div class="info-item"><b>প্রিয় রং</b> কালো ও সাদা - শক্তি আর শান্তি।</div>
+<div class="info-item"><b>প্রিয় প্রাণী</b> 🐈‍⬛ বিড়াল - মিউ মিউ ডাক খুশি রাখে।</div>
+<div class="info-item"><b>প্রিয় গান</b> 🎧 কদম - মন খারাপে শুনি।</div>
+<div class="info-item"><b>প্রিয় সূরা</b> 📖 আর-রহমান - মন শান্ত হয়।</div>
+</div>
+</div>
 
-        <div class="info-card full-width">
-          <h3>নাম</h3>
-          <p>সুবর্ণা মোস্তফা প্রমি &nbsp;|&nbsp; ডাক নাম: প্রমি</p>
-        </div>
+<div class="card" id="gallery">
+<h2><i class="fa-solid fa-palette"></i> আমার গ্যালারি</h2>
+<p style="color:#666;margin-bottom:15px">আমার আঁকা সেরা ছবিগুলো</p>
+<div class="gallery-grid">
+<div class="gallery-box"><i class="fa-solid fa-image"></i><span>Drawing 1</span></div>
+<div class="gallery-box"><i class="fa-solid fa-image"></i><span>Drawing 2</span></div>
+<div class="gallery-box"><i class="fa-solid fa-image"></i><span>Drawing 3</span></div>
+<div class="gallery-box"><i class="fa-solid fa-plus"></i><span>More Coming</span></div>
+</div>
+</div>
 
-        <div class="info-card full-width">
-          <h3>আমার সম্পর্কে</h3>
-          <p>আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
-        </div>
+<div class="card" id="friends">
+<h2><i class="fa-solid fa-heart"></i> প্রিয় মানুষ</h2>
+<div style="text-align:center;padding:20px">
+<div style="font-size:50px">👩‍❤️‍👩</div>
+<h3 style="margin:15px 0">মিম ও তাজকিয়া</h3>
+<p style="color:#888">ওরা শুধু বন্ধু না, আমার পরিবার।<br>ওদের সাথে সময় কাটাতে সবচেয়ে বেশি ভালো লাগে।</p>
+</div>
+</div>
 
-        <div class="info-card">
-          <h3>🎨 সবচেয়ে বেশি পছন্দের জিনিস</h3>
-          <p>ছবি আঁকা। রং-তুলি হাতে নিলেই আমি অন্য এক জগতে হারিয়ে যাই। এটা শুধু শখ না, এটা আমার ভালোবাসা।</p>
-        </div>
+<div class="card" id="social">
+<h2><i class="fa-solid fa-link"></i> আমার সোশ্যাল লিংক</h2>
+<a class="social-btn youtube" href="https://youtube.com/@promi_005?si=5KO4YbCdUpJXYjsL" target="_blank">
+<div class="social-icon"><i class="fa-brands fa-youtube"></i></div>
+<div><b>YouTube</b><br><span style="color:#888;font-size:13px">@promi_005</span></div>
+</a>
+<a class="social-btn instagram" href="https://www.instagram.com/violex_005?mdxt=azdtbXlqdGpreXNm" target="_blank">
+<div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+<div><b>Instagram</b><br><span style="color:#888;font-size:13px">violex_005</span></div>
+</a>
+<a class="social-btn tiktok" href="https://vm.tiktok.com/ZS9UhCj2cUGEp-qsUzN/" target="_blank">
+<div class="social-icon"><i class="fa-brands fa-tiktok"></i></div>
+<div><b>TikTok</b><br><span style="color:#888;font-size:13px">Promi Official</span></div>
+</a>
+</div>
 
-        <div class="info-card">
-          <h3>📐 প্রিয় বিষয়</h3>
-          <p>গণিত। অংকের সমাধান করতে আমার দারুণ লাগে।</p>
-        </div>
+</div>
 
-        <div class="info-card">
-          <h3>✨ আমার স্বপ্ন</h3>
-          <p>বড় হয়ে একজন আদর্শ শিক্ষক হতে চাই, যাতে সবাইকে সুন্দর করে পড়াতে পারি।</p>
-        </div>
-
-        <div class="info-card">
-          <h3>🎨 প্রিয় রং</h3>
-          <p>কালো ও সাদা। কালো - শক্তি আর স্টাইল, সাদা - শান্তি আর সরলতা।</p>
-        </div>
-
-        <div class="info-card">
-          <h3>🐈‍⬛ প্রিয় প্রাণী</h3>
-          <p>বিড়াল। বিড়ালের নরম লোম আর মিউ মিউ ডাক আমাকে সবসময় খুশি রাখে।</p>
-        </div>
-
-        <div class="info-card">
-          <h3>🎧 প্রিয় গান</h3>
-          <p>কদম। মন খারাপ থাকলে এই গান শুনি।</p>
-        </div>
-
-        <div class="info-card">
-          <h3>📖 প্রিয় সূরা</h3>
-          <p>আর-রহমান। শুনলে আমার মন শান্ত হয়ে যায়।</p>
-        </div>
-
-        <div class="info-card full-width">
-          <h3>👩‍❤️‍👩 প্রিয় মানুষ</h3>
-          <p>মিম ও তাজকিয়া। ওরা শুধু বন্ধু না, আমার পরিবার।</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- GALLERY -->
-    <div class="gallery-section">
-      <h3>📸 Promi's Gallery</h3>
-      <div class="masonry">
-        <img src="promi1.jpg" alt="Promi 1">
-        <img src="promi2.jpg" alt="Promi 2">
-        <img src="promi3.jpg" alt="Promi 3">
-        <img src="promi1.jpg" alt="Promi 1">
-        <img src="promi2.jpg" alt="Promi 2">
-      </div>
-    </div>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    Developer by <span>Seyam</span>
-  </div>
+<div class="footer">
+<h3>SUBARNA MOSTAFA PROMI</h3>
+<p>Thank you for visiting my personal website</p>
+<div class="dev-badge">DEVELOPER BY SEYAM 🖤</div>
+<p style="margin-top:20px;font-size:11px;letter-spacing:2px">© 2025 ALL RIGHTS RESERVED</p>
+</div>
 
 </body>
- </html>
+</html>
