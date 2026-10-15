@@ -11,9 +11,10 @@
 body{background:#101010;color:#fff}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes glow{0%,100%{box-shadow:0 0 25px rgba(255,255,255,0.3)}50%{box-shadow:0 0 50px rgba(255,255,255,0.5)}}
-@keyframes liveBlink{0%,100%{opacity:1}50%{opacity:0.4}}
+@keyframes liveBlink{0%,100%{opacity:1}50%{opacity:0.3}}
 nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.1);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,0.2);padding:8px 15px;border-radius:50px;display:flex;gap:5px}
 nav a{color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-size:14px;font-weight:600}
+nav a:hover{background:#fff;color:#000}
 .hero{padding:110px 20px 60px;text-align:center;background:radial-gradient(circle at 50% 0%, #222, #000)}
 .profile-wrap{position:relative;width:130px;height:130px;margin:0 auto 20px}
 .profile{width:130px;height:130px;border-radius:50%;border:4px solid #fff;box-shadow:0 0 40px rgba(255,255,255,0.5);background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-size:60px;animation:float 3s ease-in-out infinite, glow 2s infinite}
@@ -22,11 +23,14 @@ nav a{color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-s
 .countdown{background:#fff;color:#000;display:inline-block;padding:12px 28px;border-radius:30px;margin-top:8px;font-size:13px;font-weight:700;min-width:300px}
 .container{max-width:700px;margin:0 auto;padding:20px}
 .card{background:#1a1a1a;border:1px solid #333;border-radius:24px;padding:25px;margin-bottom:25px}
-.video-box{border-radius:15px;overflow:hidden;border:2px solid #333;margin-bottom:20px}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .info-item{background:#252525;padding:14px;border-radius:12px;border:1px solid #333;font-size:14px}
 .info-item b{color:#aaa;font-size:11px;display:block;margin-bottom:3px}
-.social-btn{display:flex;align-items:center;gap:15px;padding:14px;background:#222;border:1px solid #333;border-radius:12px;text-decoration:none;color:#fff;margin-bottom:10px}
+.audio-box{background:#252525;border:1px solid #333;border-radius:15px;padding:15px;margin-bottom:20px}
+.audio-box p{margin-bottom:10px;color:#ccc;font-size:14px}
+audio{width:100%;filter:invert(1)}
+.social-btn{display:flex;align-items:center;gap:15px;padding:14px;background:#222;border:1px solid #333;border-radius:12px;text-decoration:none;color:#fff;margin-bottom:10px;transition:0.3s}
+.social-btn:hover{transform:translateX(8px);background:#fff;color:#000}
 .footer{background:#000;border-top:1px solid #222;padding:30px;text-align:center}
 .dev-badge{background:#fff;color:#000;padding:10px 25px;border-radius:30px;font-weight:800;display:inline-block;margin-top:10px}
 </style>
@@ -46,20 +50,46 @@ nav a{color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;font-s
 </div>
 
 <div class="container">
+<div class="card" id="about">
+<h2><i class="fa-solid fa-user"></i> আমার সম্পর্কে</h2>
+<p style="margin-bottom:15px;color:#ccc">আমি প্রমি, নবম শ্রেণির একজন ছাত্রী।</p>
+<div class="info-grid">
+<div class="info-item"><b>🎨 পছন্দের জিনিস</b> ছবি আঁকা</div>
+<div class="info-item"><b>📐 প্রিয় বিষয়</b> গণিত</div>
+<div class="info-item"><b>✨ স্বপ্ন</b> শিক্ষক হওয়া</div>
+<div class="info-item"><b>🎨 প্রিয় রং</b> কালো ও সাদা</div>
+<div class="info-item"><b>🐈‍⬛ প্রিয় প্রাণী</b> বিড়াল</div>
+<div class="info-item"><b>🎧 প্রিয় গান</b> কদম</div>
+<div class="info-item"><b>📖 প্রিয় সূরা</b> আর-রহমান</div>
+<div class="info-item"><b>👩‍❤️‍👩 প্রিয় মানুষ</b> মিম ও তাজকিয়া</div>
+</div>
+</div>
+
 <div class="card" id="play">
-<h2><i class="fa-solid fa-music"></i> আমার পছন্দের - এখানেই বাজবে</h2>
+<h2><i class="fa-solid fa-music"></i> আমার পছন্দের Audio</h2>
 
-<p style="margin-bottom:10px;color:#aaa;font-size:13px">📖 সূরা আর-রহমান - FIXED</p>
-<div class="video-box">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/35w7Fqs4oH8?rel=0" title="Surah Ar Rahman" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="audio-box">
+<p>📖 সূরা আর-রহমান - Website er vitor bajbe</p>
+<audio controls controlsList="nodownload">
+  <source src="https://server8.mp3quran.net/afs/055.mp3" type="audio/mpeg">
+</audio>
 </div>
 
-<p style="margin-bottom:10px;color:#aaa;font-size:13px">🎧 কদম - Blue Jeans - FIXED</p>
-<div class="video-box">
-<iframe width="100%" height="220" src="https://www.youtube.com/embed/8bq1z5h5dJw?rel=0" title="Kodom Song" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="audio-box">
+<p>🎧 কদম - Blue Jeans - Website er vitor bajbe</p>
+<audio controls controlsList="nodownload">
+  <source src="https://paglasongs.com/files/download/id/1465" type="audio/mpeg">
+</audio>
+<p style="font-size:11px;color:#666;margin-top:8px">যদি ২য় গান না বাজে, তোর mp3 upload করে link dibo</p>
 </div>
 
-<p style="color:#666;font-size:11px;text-align:center;margin-top:10px">যদি আবার unavailable দেখায়, YouTube link টা আমাকে দিস, আমি embed on করে দিবো</p>
+</div>
+
+<div class="card" id="social">
+<h2><i class="fa-solid fa-link"></i> আমার সোশ্যাল</h2>
+<a class="social-btn" href="https://youtube.com/@promi_005" target="_blank"><i class="fa-brands fa-youtube" style="color:#ff0000"></i> YouTube - @promi_005</a>
+<a class="social-btn" href="https://www.instagram.com/violex_005" target="_blank"><i class="fa-brands fa-instagram" style="color:#C13584"></i> Instagram - violex_005</a>
+<a class="social-btn" href="https://vm.tiktok.com/ZS9UhCj2cUGEp-qsUzN/" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok - Promi</a>
 </div>
 </div>
 
@@ -77,7 +107,6 @@ function updateWatch(){
   document.getElementById('liveWatch').innerHTML = `🕒 ${h}:${m}:${s} ${ap} - LIVE`;
 }
 setInterval(updateWatch,1000); updateWatch();
-
 function updateCountdown(){
   const now = new Date();
   let bday = new Date(now.getFullYear(),9,21);
