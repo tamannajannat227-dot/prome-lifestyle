@@ -3,75 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROMI | Subarna Mostafa Promi</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<title>PROMI - Subarna Mostafa Promi</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#fffcf8;color:#111;font-family:'Hind Siliguri',sans-serif;line-height:1.7}
-.top{max-width:1250px;margin:0 auto;padding:50px 22px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:850px){.top{grid-template-columns:1fr}}
-.main-img{width:100%;height:700px;object-fit:cover;border-radius:32px;box-shadow:0 25px 70px rgba(0,0,0,.18)}
-@media(max-width:850px){.main-img{height:520px}}
-.big{font-family:'Playfair Display';font-size:74px;line-height:.9;letter-spacing:-2px}
-@media(max-width:850px){.big{font-size:52px}}
-.bday{background:#111;color:#fff;padding:12px 26px;border-radius:100px;display:inline-block;margin-top:18px;font-size:14px}
-.wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
-.card{background:#fff;border:1px solid #f3ece3;border-radius:24px;padding:28px;margin-bottom:18px;box-shadow:0 4px 20px rgba(0,0,0,.03)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:700px){.grid2{grid-template-columns:1fr}}
-.dream{background:#111;color:#fff;border-radius:26px;padding:38px;text-align:center;margin-bottom:18px}
-.dream h2{font-family:'Cormorant Garamond';font-size:36px}
-/* Gallery like your Netlify link */
-.gallery-title{text-align:center;margin:30px 0 18px;font-family:'Cormorant Garamond';font-size:34px}
-.masonry{columns:2;column-gap:18px}
-@media(max-width:700px){.masonry{columns:1}}
-.masonry img{width:100%;border-radius:26px;margin-bottom:18px;object-fit:cover;box-shadow:0 15px 40px rgba(0,0,0,.12);transition:.35s}
-.masonry img:hover{transform:translateY(-6px) scale(1.01)}
-.footer{text-align:center;padding:60px 20px;background:#111;color:#777;margin-top:40px}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #fdfbf8;
+    color: #1a1a1a;
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 50px 24px 40px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding-top: 30px;
+    }
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s ease;
+  }
+
+  .hero-img:hover {
+    transform: scale(1.02);
+  }
+
+  .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 8vw, 78px);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #111;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #111;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-top: 28px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== WRAP ===== */
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px 60px;
+  }
+
+  /* ===== GALLERY ===== */
+  .gallery-section {
+    background: #fff;
+    border: 1px solid #f0e9e2;
+    border-radius: 28px;
+    padding: 36px 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  }
+
+  .gallery-section h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #222;
+  }
+
+  .masonry {
+    columns: 2;
+    column-gap: 18px;
+  }
+
+  @media (max-width: 700px) {
+    .masonry {
+      columns: 1;
+    }
+  }
+
+  .masonry img {
+    width: 100%;
+    border-radius: 22px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .masonry img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+    color: #999;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .footer span {
+    color: #fff;
+    font-weight: 500;
+  }
 </style>
 </head>
 <body>
 
-<div class="top">
-<img class="main-img" src="promi1.jpg" alt="Promi">
-<div>
-<div class="big">SUBARNA<br>MOSTAFA<br>PROMI</div>
-<div style="letter-spacing:7px;color:#999;margin-top:12px;font-size:12px">ডাক নাম: প্রমি</div>
-<div class="bday">🎂 জন্মদিন: ২১ অক্টোবর</div>
+  <!-- HERO -->
+  <div class="hero">
+    <img class="hero-img" src="promi1.jpg" alt="Promi">
+    <div class="hero-text">
+      <h1>SUBARNA<br>MOSTAFA<br>PROMI</h1>
+      <div class="badge">🎂 ২১ অক্টোবর &nbsp;|&nbsp; 21 October</div>
+    </div>
+  </div>
 
-<div class="card" style="margin-top:24px">
-<h3>👩‍🎓 আমার সম্পর্কে</h3>
-<p>আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
-</div>
-</div>
-</div>
+  <!-- GALLERY -->
+  <div class="wrap">
+    <div class="gallery-section">
+      <h3>📸 Promi's Gallery</h3>
+      <div class="masonry">
+        <img src="promi1.jpg" alt="Promi 1">
+        <img src="promi2.jpg" alt="Promi 2">
+        <img src="promi3.jpg" alt="Promi 3">
+        <img src="promi1.jpg" alt="Promi 1">
+        <img src="promi2.jpg" alt="Promi 2">
+      </div>
+    </div>
+  </div>
 
-<div class="wrap">
-<div class="grid2">
-<div class="card"><h3>🎨 সবচেয়ে বেশি পছন্দের জিনিস: ছবি আঁকা</h3><p>আমার সবচেয়ে প্রিয় কাজ হলো ছবি আঁকা। রং-তুলি হাতে নিলেই আমি অন্য এক জগতে হারিয়ে যাই। এটা শুধু শখ না, এটা আমার ভালোবাসা।</p></div>
-<div class="card"><h3>📐 প্রিয় বিষয়: গণিত</h3><p>গণিত আমার সবচেয়ে প্রিয় বিষয়। অংকের সমাধান করতে আমার দারুণ লাগে।</p></div>
-</div>
-
-<div class="dream"><h2>✨ আমার স্বপ্ন: শিক্ষক হওয়া</h2><p style="color:#bbb;margin-top:8px">বড় হয়ে একজন আদর্শ শিক্ষক হতে চাই, যাতে সবাইকে সুন্দর করে পড়াতে পারি।</p></div>
-
-<div class="grid2">
-<div class="card"><h3>🎨 প্রিয় রং: কালো ও সাদা</h3><p>কালো - শক্তি আর স্টাইল, সাদা - শান্তি আর সরলতা।</p></div>
-<div class="card"><h3>🐈‍⬛ প্রিয় প্রাণী: বিড়াল</h3><p>বিড়ালের নরম লোম আর মিউ মিউ ডাক আমাকে সবসময় খুশি রাখে।</p></div>
-<div class="card"><h3>🎧 প্রিয় গান: কদম</h3><p>কদম গানটা আমার খুব প্রিয়, মন খারাপ থাকলে এই গান শুনি।</p></div>
-<div class="card"><h3>📖 প্রিয় সূরা: আর-রহমান</h3><p>সূরা আর-রহমান শুনলে আমার মন শান্ত হয়ে যায়।</p></div>
-</div>
-
-<div class="card"><h3>👩‍❤️‍👩 প্রিয় মানুষ: মিম ও তাজকিয়া</h3><p>ওরা শুধু বন্ধু না, আমার পরিবার।</p></div>
-
-<div class="gallery-title">📸 Promi's Gallery</div>
-<div class="masonry">
-<img src="promi1.jpg" alt="Promi 1">
-<img src="promi2.jpg" alt="Promi 2">
-</div>
-
-</div>
-
-<div class="footer">Made By Seyam 🖤 For Promi<br><br>© PROMI Lifestyle 2025</div>
+  <!-- FOOTER -->
+  <div class="footer">
+    Developer by <span>Seyam</span>
+  </div>
 
 </body>
-                                         </html>
+  </html>
