@@ -16,7 +16,7 @@
     background: #fdfbf8;
     color: #1a1a1a;
     font-family: 'Hind Siliguri', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* ===== HERO ===== */
@@ -71,7 +71,6 @@
     margin-top: 28px;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 0.3px;
   }
 
   /* ===== WRAP ===== */
@@ -79,6 +78,59 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 10px 20px 60px;
+  }
+
+  /* ===== ABOUT SECTION ===== */
+  .about-section {
+    background: #fff;
+    border: 1px solid #f0e9e2;
+    border-radius: 28px;
+    padding: 40px 32px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  }
+
+  .about-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #222;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .info-card {
+    background: #faf8f5;
+    border-radius: 18px;
+    padding: 22px 20px;
+    border: 1px solid #f0e9e2;
+  }
+
+  .info-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+  }
+
+  .info-card p {
+    font-size: 15.5px;
+    color: #444;
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
   }
 
   /* ===== GALLERY ===== */
@@ -117,7 +169,6 @@
     display: block;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
-    cursor: pointer;
   }
 
   .masonry img:hover {
@@ -152,8 +203,68 @@
     </div>
   </div>
 
-  <!-- GALLERY -->
   <div class="wrap">
+
+    <!-- ABOUT SECTION -->
+    <div class="about-section">
+      <h2>👩‍🎓 আমার সম্পর্কে</h2>
+
+      <div class="info-grid">
+
+        <div class="info-card full-width">
+          <h3>নাম</h3>
+          <p>সুবর্ণা মোস্তফা প্রমি &nbsp;|&nbsp; ডাক নাম: প্রমি</p>
+        </div>
+
+        <div class="info-card full-width">
+          <h3>আমার সম্পর্কে</h3>
+          <p>আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🎨 সবচেয়ে বেশি পছন্দের জিনিস</h3>
+          <p>ছবি আঁকা। রং-তুলি হাতে নিলেই আমি অন্য এক জগতে হারিয়ে যাই। এটা শুধু শখ না, এটা আমার ভালোবাসা।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>📐 প্রিয় বিষয়</h3>
+          <p>গণিত। অংকের সমাধান করতে আমার দারুণ লাগে।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>✨ আমার স্বপ্ন</h3>
+          <p>বড় হয়ে একজন আদর্শ শিক্ষক হতে চাই, যাতে সবাইকে সুন্দর করে পড়াতে পারি।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🎨 প্রিয় রং</h3>
+          <p>কালো ও সাদা। কালো - শক্তি আর স্টাইল, সাদা - শান্তি আর সরলতা।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🐈‍⬛ প্রিয় প্রাণী</h3>
+          <p>বিড়াল। বিড়ালের নরম লোম আর মিউ মিউ ডাক আমাকে সবসময় খুশি রাখে।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🎧 প্রিয় গান</h3>
+          <p>কদম। মন খারাপ থাকলে এই গান শুনি।</p>
+        </div>
+
+        <div class="info-card">
+          <h3>📖 প্রিয় সূরা</h3>
+          <p>আর-রহমান। শুনলে আমার মন শান্ত হয়ে যায়।</p>
+        </div>
+
+        <div class="info-card full-width">
+          <h3>👩‍❤️‍👩 প্রিয় মানুষ</h3>
+          <p>মিম ও তাজকিয়া। ওরা শুধু বন্ধু না, আমার পরিবার।</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GALLERY -->
     <div class="gallery-section">
       <h3>📸 Promi's Gallery</h3>
       <div class="masonry">
@@ -164,6 +275,7 @@
         <img src="promi2.jpg" alt="Promi 2">
       </div>
     </div>
+
   </div>
 
   <!-- FOOTER -->
@@ -172,4 +284,4 @@
   </div>
 
 </body>
-  </html>
+         </html>
