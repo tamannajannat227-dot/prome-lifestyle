@@ -8,32 +8,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Hind Siliguri',sans-serif;scroll-behavior:smooth}
-body{background:#050505;color:#e0e0e0;overflow-x:hidden}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+body{background:#101010;color:#fff;overflow-x:hidden}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(255,255,255,0.2)}50%{box-shadow:0 0 40px rgba(255,255,255,0.4)}}
-nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(20,20,20,0.8);backdrop-filter:blur(10px);border:1px solid #222;padding:8px 15px;border-radius:50px;display:flex;gap:5px;animation:fadeUp 0.8s}
-nav a{color:#888;text-decoration:none;padding:8px 16px;border-radius:20px;transition:0.3s;font-size:14px;font-weight:600}
-nav a:hover{background:#fff;color:#000;transform:scale(1.05)}
-.hero{padding:110px 20px 60px;text-align:center;background:radial-gradient(circle at 50% 0%, #1a1a1a, #000)}
-.profile{width:120px;height:120px;border-radius:50%;margin:0 auto 20px;border:3px solid #fff;box-shadow:0 0 30px rgba(255,255,255,0.3);background:#111;display:flex;align-items:center;justify-content:center;font-size:50px;animation:float 3s ease-in-out infinite, glow 2s infinite}
-.hero h1{font-size:36px;background:linear-gradient(to bottom,#fff,#888);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:fadeUp 0.8s 0.2s both}
-.hero p{animation:fadeUp 0.8s 0.4s both}
-.countdown{background:#111;border:1px solid #333;display:inline-block;padding:10px 25px;border-radius:30px;margin-top:15px;color:#fff;font-size:13px;animation:fadeUp 0.8s 0.6s both, glow 2s infinite;min-width:280px}
+@keyframes glow{0%,100%{box-shadow:0 0 25px rgba(255,255,255,0.3)}50%{box-shadow:0 0 50px rgba(255,255,255,0.5)}}
+nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.1);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,0.2);padding:8px 15px;border-radius:50px;display:flex;gap:5px;animation:fadeUp 0.8s}
+nav a{color:#fff;text-decoration:none;padding:8px 16px;border-radius:20px;transition:0.3s;font-size:14px;font-weight:600}
+nav a:hover{background:#fff;color:#000;transform:scale(1.1)}
+.hero{padding:110px 20px 60px;text-align:center;background:radial-gradient(circle at 50% 0%, #222, #000)}
+.profile{width:130px;height:130px;border-radius:50%;margin:0 auto 20px;border:4px solid #fff;box-shadow:0 0 40px rgba(255,255,255,0.5);background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-size:60px;animation:float 3s ease-in-out infinite, glow 2s infinite}
+.hero h1{font-size:38px;color:#fff;text-shadow:0 0 20px rgba(255,255,255,0.5);animation:fadeUp 0.8s 0.2s both}
+.countdown{background:#fff;color:#000;display:inline-block;padding:12px 28px;border-radius:30px;margin-top:15px;font-size:13px;font-weight:700;animation:fadeUp 0.8s 0.6s both, glow 2s infinite;min-width:300px}
 .container{max-width:700px;margin:0 auto;padding:20px}
-.card{background:linear-gradient(145deg,#111,#0a0a0a);border:1px solid #1e1e1e;border-radius:24px;padding:25px;margin-bottom:25px;animation:fadeUp 0.8s both;transition:0.4s}
-.card:hover{transform:translateY(-5px);border-color:#333;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+.card{background:#1a1a1a;border:1px solid #333;border-radius:24px;padding:25px;margin-bottom:25px;animation:fadeUp 0.8s both;transition:0.4s;box-shadow:0 5px 20px rgba(0,0,0,0.3)}
+.card:hover{transform:translateY(-8px);border-color:#fff;box-shadow:0 15px 40px rgba(255,255,255,0.1)}
+.card h2{font-size:22px;margin-bottom:15px;color:#fff;display:flex;gap:10px;align-items:center}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.info-item{background:#0f0f0f;padding:14px;border-radius:12px;border:1px solid #1a1a1a;font-size:14px;line-height:1.5;transition:0.3s}
-.info-item:hover{transform:scale(1.03);background:#151515}
-.info-item b{color:#888;font-size:11px;display:block;margin-bottom:3px;letter-spacing:1px}
-.music-player{display:flex;align-items:center;gap:15px;background:#111;border:1px solid #222;padding:15px;border-radius:15px;margin-bottom:12px;cursor:pointer;transition:0.4s}
-.music-player:hover{transform:scale(1.02) translateX(5px);border-color:#fff;background:#161616}
-.music-player button{width:45px;height:45px;border-radius:50%;border:none;background:#fff;color:#000;font-size:18px;cursor:pointer}
-.social-btn{display:flex;align-items:center;gap:15px;padding:14px;background:#111;border:1px solid #222;border-radius:12px;text-decoration:none;color:#fff;margin-bottom:10px;transition:0.3s}
-.social-btn:hover{transform:translateX(8px);background:#1a1a1a}
-.footer{background:#080808;border-top:1px solid #111;padding:30px;text-align:center;margin-top:30px}
-.dev-badge{background:#fff;color:#000;padding:8px 20px;border-radius:30px;font-weight:700;font-size:13px;display:inline-block;margin-top:10px;animation:glow 2s infinite}
+.info-item{background:#252525;padding:14px;border-radius:12px;border:1px solid #333;font-size:14px;line-height:1.5;transition:0.3s;color:#eee}
+.info-item:hover{transform:scale(1.03);background:#2a2a2a;border-color:#fff}
+.info-item b{color:#aaa;font-size:11px;display:block;margin-bottom:3px;letter-spacing:1px}
+.video-box{border-radius:15px;overflow:hidden;border:2px solid #333;margin-bottom:20px;transition:0.3s}
+.video-box:hover{border-color:#fff;transform:scale(1.02)}
+.social-btn{display:flex;align-items:center;gap:15px;padding:14px;background:#222;border:1px solid #333;border-radius:12px;text-decoration:none;color:#fff;margin-bottom:10px;transition:0.3s;font-weight:600}
+.social-btn:hover{transform:translateX(8px);background:#fff;color:#000;border-color:#fff}
+.footer{background:#000;border-top:1px solid #222;padding:30px;text-align:center;margin-top:30px}
+.dev-badge{background:#fff;color:#000;padding:10px 25px;border-radius:30px;font-weight:800;font-size:14px;display:inline-block;margin-top:10px;animation:glow 2s infinite}
 </style>
 </head>
 <body>
@@ -42,50 +41,46 @@ nav a:hover{background:#fff;color:#000;transform:scale(1.05)}
 <div class="hero" id="home">
 <div class="profile">👩</div>
 <h1>সুবর্ণা মোস্তফা প্রমি</h1>
-<p>ডাক নাম: প্রমি | জন্মদিন: ২১ অক্টোবর 🎂</p>
+<p style="color:#ccc;margin-top:5px">ডাক নাম: প্রমি | জন্মদিন: ২১ অক্টোবর 🎂</p>
 <div class="countdown" id="countdown">🎂 লোড হচ্ছে...</div>
 </div>
 
 <div class="container">
 <div class="card" id="about">
 <h2><i class="fa-solid fa-user"></i> আমার সম্পর্কে</h2>
-<p style="margin-bottom:15px;color:#aaa">আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
+<p style="margin-bottom:15px;color:#ccc">আমি প্রমি, নবম শ্রেণির একজন ছাত্রী। আমার দুই বেস্ট ফ্রেন্ডের সাথে সময় কাটাতে আমার সবচেয়ে বেশি ভালো লাগে।</p>
 <div class="info-grid">
-<div class="info-item"><b>🎨 সবচেয়ে বেশি পছন্দের জিনিস</b> ছবি আঁকা - রং-তুলি হাতে নিলেই অন্য জগতে হারিয়ে যাই, এটা শুধু শখ না, এটা আমার ভালোবাসা।</div>
-<div class="info-item"><b>📐 প্রিয় বিষয়</b> গণিত - অংকের সমাধান করতে দারুণ লাগে।</div>
-<div class="info-item"><b>✨ আমার স্বপ্ন</b> শিক্ষক হওয়া - আদর্শ শিক্ষক হতে চাই, যাতে সবাইকে সুন্দর করে পড়াতে পারি।</div>
-<div class="info-item"><b>🎨 প্রিয় রং</b> কালো ও সাদা - কালো শক্তি আর স্টাইল, সাদা শান্তি আর সরলতা।</div>
-<div class="info-item"><b>🐈‍⬛ প্রিয় প্রাণী</b> বিড়াল - বিড়ালের নরম লোম আর মিউ মিউ ডাক সবসময় খুশি রাখে।</div>
-<div class="info-item"><b>🎧 প্রিয় গান</b> কদম - মন খারাপ থাকলে এই গান শুনি।</div>
-<div class="info-item"><b>📖 প্রিয় সূরা</b> আর-রহমান - এই সূরা শুনলে মন শান্ত হয়ে যায়।</div>
-<div class="info-item"><b>👩‍❤️‍👩 প্রিয় মানুষ</b> মিম ও তাজকিয়া - ওরা শুধু বন্ধু না, আমার পরিবার।</div>
+<div class="info-item"><b>🎨 সবচেয়ে বেশি পছন্দের জিনিস</b> ছবি আঁকা - রং-তুলি হাতে নিলেই অন্য জগতে হারিয়ে যাই</div>
+<div class="info-item"><b>📐 প্রিয় বিষয়</b> গণিত - অংকের সমাধান করতে দারুণ লাগে</div>
+<div class="info-item"><b>✨ আমার স্বপ্ন</b> শিক্ষক হওয়া - আদর্শ শিক্ষক হতে চাই</div>
+<div class="info-item"><b>🎨 প্রিয় রং</b> কালো ও সাদা</div>
+<div class="info-item"><b>🐈‍⬛ প্রিয় প্রাণী</b> বিড়াল</div>
+<div class="info-item"><b>🎧 প্রিয় গান</b> কদম - মন খারাপ থাকলে শুনি</div>
+<div class="info-item"><b>📖 প্রিয় সূরা</b> আর-রহমান - মন শান্ত হয়ে যায়</div>
+<div class="info-item"><b>👩‍❤️‍👩 প্রিয় মানুষ</b> মিম ও তাজকিয়া - ওরা আমার পরিবার</div>
 </div>
 </div>
 
 <div class="card" id="play">
 <h2><i class="fa-solid fa-music"></i> আমার পছন্দের</h2>
-<div class="music-player" onclick="window.open('https://youtu.be/sT6-BHZhsvk','_blank')">
-<button><i class="fa-solid fa-play"></i></button>
-<div><b>সূরা আর-রহমান 🕌</b><br><small style="color:#888">Click করলে সূরা বাজবে</small></div>
-</div>
-<div class="music-player" onclick="window.open('https://youtu.be/Btq6k5U9VGU','_blank')">
-<button><i class="fa-solid fa-play"></i></button>
-<div><b>কদম - Blue Jeans 🎧</b><br><small style="color:#888">Click করলে গান বাজবে</small></div>
-</div>
+<p style="margin-bottom:10px;color:#aaa;font-size:13px">📖 সূরা আর-রহমান - Website er vitor ei bajbe</p>
+<div class="video-box"><iframe width="100%" height="220" src="https://www.youtube.com/embed/sT6-BHZhsvk" frameborder="0" allowfullscreen></iframe></div>
+<p style="margin-bottom:10px;color:#aaa;font-size:13px">🎧 কদম - Blue Jeans</p>
+<div class="video-box"><iframe width="100%" height="220" src="https://www.youtube.com/embed/Btq6k5U9VGU" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
 <div class="card" id="social">
 <h2><i class="fa-solid fa-link"></i> আমার সোশ্যাল</h2>
-<a class="social-btn" href="https://youtube.com/@promi_005" target="_blank"><i class="fa-brands fa-youtube" style="color:#ff0000;font-size:22px"></i> <b>YouTube - @promi_005</b></a>
-<a class="social-btn" href="https://www.instagram.com/violex_005" target="_blank"><i class="fa-brands fa-instagram" style="color:#C13584;font-size:22px"></i> <b>Instagram - violex_005</b></a>
-<a class="social-btn" href="https://vm.tiktok.com/ZS9UhCj2cUGEp-qsUzN/" target="_blank"><i class="fa-brands fa-tiktok" style="font-size:22px"></i> <b>TikTok - Promi Official</b></a>
+<a class="social-btn" href="https://youtube.com/@promi_005" target="_blank"><i class="fa-brands fa-youtube" style="color:#ff0000;font-size:22px"></i> YouTube - @promi_005</a>
+<a class="social-btn" href="https://www.instagram.com/violex_005" target="_blank"><i class="fa-brands fa-instagram" style="color:#C13584;font-size:22px"></i> Instagram - violex_005</a>
+<a class="social-btn" href="https://vm.tiktok.com/ZS9UhCj2cUGEp-qsUzN/" target="_blank"><i class="fa-brands fa-tiktok" style="font-size:22px"></i> TikTok - Promi Official</a>
 </div>
 </div>
 
 <div class="footer">
 <h3>SUBARNA MOSTAFA PROMI</h3>
 <div class="dev-badge">DEVELOPER BY SEYAM 🖤</div>
-<p style="color:#444;font-size:11px;margin-top:15px">© 2025 ALL RIGHTS RESERVED</p>
+<p style="color:#666;font-size:11px;margin-top:15px">© 2025 ALL RIGHTS RESERVED</p>
 </div>
 
 <script>
