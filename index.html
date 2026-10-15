@@ -19,58 +19,66 @@
     line-height: 1.7;
   }
 
-  /* ===== HERO ===== */
-  .hero {
+  /* ===== BANNER / HERO ===== */
+  .banner {
     max-width: 1240px;
-    margin: 0 auto;
-    padding: 50px 24px 40px;
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 50px;
-    align-items: center;
-  }
-
-  @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-      gap: 30px;
-      padding-top: 30px;
-    }
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 620px;
-    object-fit: cover;
+    margin: 40px auto 30px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border-radius: 32px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-    transition: transform 0.5s ease;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
   }
 
-  .hero-img:hover {
-    transform: scale(1.02);
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+    pointer-events: none;
   }
 
-  .hero-text h1 {
+  .banner h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 8vw, 78px);
-    line-height: 0.95;
+    font-size: clamp(48px, 9vw, 82px);
+    line-height: 1;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #111;
+    margin-bottom: 18px;
+    position: relative;
+  }
+
+  .banner .subtitle {
+    font-size: 20px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    font-weight: 400;
   }
 
   .badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #111;
-    color: #fff;
-    padding: 14px 28px;
+    background: #fff;
+    color: #111;
+    padding: 14px 32px;
     border-radius: 100px;
-    margin-top: 28px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 600px) {
+    .banner {
+      padding: 60px 24px;
+      margin: 20px 16px 20px;
+    }
   }
 
   /* ===== WRAP ===== */
@@ -194,13 +202,11 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <img class="hero-img" src="promi1.jpg" alt="Promi">
-    <div class="hero-text">
-      <h1>SUBARNA<br>MOSTAFA<br>PROMI</h1>
-      <div class="badge">🎂 ২১ অক্টোবর &nbsp;|&nbsp; 21 October</div>
-    </div>
+  <!-- BANNER -->
+  <div class="banner">
+    <h1>SUBARNA<br>MOSTAFA<br>PROMI</h1>
+    <div class="subtitle">ডাক নাম • প্রমি</div>
+    <div class="badge">🎂 ২১ অক্টোবর &nbsp;|&nbsp; 21 October</div>
   </div>
 
   <div class="wrap">
@@ -284,4 +290,4 @@
   </div>
 
 </body>
-         </html>
+ </html>
